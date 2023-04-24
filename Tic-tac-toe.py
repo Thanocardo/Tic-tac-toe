@@ -21,7 +21,6 @@ def tic_tac_toe_check(player, positions, score):
         print("DRAW")
         return True
 
-
 score = {"X": 0, "O": 0}
 positions = {"1": "-", "2": "-", "3": "-", "4": "-", "5": "-", "6": "-", "7": "-", "8": "-", "9": "-"}
 player = "O"
