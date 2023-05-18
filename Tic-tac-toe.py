@@ -49,7 +49,9 @@ while True:
             again = input("Wanna play again? [YES/NO]: ")
             again = again.lower()
             if again == "yes":
-                positions = {"1": "-", "2": "-", "3": "-", "4": "-", "5": "-", "6": "-", "7": "-", "8": "-", "9": "-"}
+                positions = {"1": "-", "2": "-", "3": "-",
+                             "4": "-", "5": "-", "6": "-",
+                             "7": "-", "8": "-", "9": "-"}
                 print(f"X {score['X']} - {score['O']} O")
                 break
             elif again == "no":
