@@ -4,14 +4,14 @@ def tic_tac_toe_board(positions):
     print(f"{positions['1']} {positions['2']} {positions['3']}     '1 2 3'")
 
 def tic_tac_toe_check(player, positions, score):
-    if (positions["1"] == player and positions["2"] == player and positions["3"] == player) or \
-        (positions["4"] == player and positions["5"] == player and positions["6"] == player) or \
-        (positions["7"] == player and positions["8"] == player and positions["9"] == player) or \
-        (positions["1"] == player and positions["4"] == player and positions["7"] == player) or \
-        (positions["2"] == player and positions["5"] == player and positions["8"] == player) or \
-        (positions["3"] == player and positions["6"] == player and positions["9"] == player) or \
-        (positions["1"] == player and positions["5"] == player and positions["9"] == player) or \
-        (positions["3"] == player and positions["5"] == player and positions["7"] == player):
+    if (positions["1"] == positions["2"] == positions["3"] == player) or \
+        (positions["4"] == positions["5"] == positions["6"] == player) or \
+        (positions["7"] == positions["8"] == positions["9"] == player) or \
+        (positions["1"] == positions["4"] == positions["7"] == player) or \
+        (positions["2"] == positions["5"] == positions["8"] == player) or \
+        (positions["3"] == positions["6"] == positions["9"] == player) or \
+        (positions["1"] == positions["5"] == positions["9"] == player) or \
+        (positions["3"] == positions["5"] == positions["7"] == player):
         score[player] += 1
         print(f"{player} WIN!!!")
         return True
@@ -22,7 +22,9 @@ def tic_tac_toe_check(player, positions, score):
         return True
 
 score = {"X": 0, "O": 0}
-positions = {"1": "-", "2": "-", "3": "-", "4": "-", "5": "-", "6": "-", "7": "-", "8": "-", "9": "-"}
+positions = {"1": "-", "2": "-", "3": "-",
+             "4": "-", "5": "-", "6": "-",
+             "7": "-", "8": "-", "9": "-"}
 player = "O"
 while True:
     if player == "O":
@@ -57,5 +59,4 @@ while True:
         if again == "no":
             break
 input("Press ENTER to terminate the program.")
-
 
